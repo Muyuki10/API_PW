@@ -1,4 +1,4 @@
-import { usuarioModel } from "../models/usuarioModel";
+import { usuarioModel } from "../models/usuarioModel.js";
 
 export const usuarioController = {
     async listar(req,res){
