@@ -7,7 +7,8 @@ export const usuarioModel = {
     },
 
     async criar(nome,email) {
-        const [result] = await pool.query("INSERT INTO usuarios (nome,email) VALUES (?, ?)"
+        const [result] = await pool.query(
+            "INSERT INTO usuarios (nome,email) VALUES (?, ?)",
             [nome, email]
         );
         return {id: result.insertId , nome, email}
